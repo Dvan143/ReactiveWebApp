@@ -1,21 +1,22 @@
 package org.example.reactivewebapp.news;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 
 import java.time.Instant;
-import java.util.UUID;
 
-@Entity
 @Getter
 @NoArgsConstructor
 public class News {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "news-seq")
-    private UUID id;
+    private Long id;
+    @Setter
     private String data;
+    @Setter
+    @Column("date_of_publication")
     private Instant dateOfPublication;
 
     public News(String data) {
