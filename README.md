@@ -7,6 +7,9 @@
 
 ### How to set up this project:
 Step 1: Clone this repository and open it in your IDE
+
 Step 2: Run the application using the main Spring Boot class
+
 Step 3: Use [Get] getLastNews and [Post] addNewNews(data) endpoints
+
 Step 4: You are awesome!
